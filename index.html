@@ -369,7 +369,7 @@ body{font-family:'Source Sans 3',system-ui,sans-serif;background:var(--paper);}h
 
 /* Final visual lock: this block intentionally comes last so legacy theme layers
   cannot override the redesigned presentation. */
-:root{--ink:#171717;--navy:#171717;--red:#a52a25;--coral:#a52a25;--gold:#f2b84b;--teal:#3c88d8;--paper:#f7f8f4;--cream:#f7f8f4;--card:#fff;--line:#e3e5e2;--edge:#e3e5e2;--steel:#68717a;--soft:#68717a;--mist:#eef3f8;}
+:root{--ink:#171717;--navy:#171717;--red:#a52a25;--coral:#a52a25;--gold:#f2b84b;--teal:#3c88d8;--paper:#f7f8f4;--cream:#f7f8f4;--card:#fff;--line:#e3e5e2;--edge:#e3e5e2;--steel:#4f5b66;--soft:#4f5b66;--mist:#eef3f8;}
 body{background:var(--paper);color:var(--ink);background-image:linear-gradient(90deg,rgba(23,23,23,.025) 1px,transparent 1px),linear-gradient(rgba(23,23,23,.025) 1px,transparent 1px);background-size:42px 42px;}
 .wrap{max-width:1180px;padding:0 34px 100px}.topbar{background:var(--ink);padding:16px 34px 13px;box-shadow:0 4px 18px rgba(24,34,31,.18)}.topbar-inner{max-width:1180px}.brandrow::before{display:none}.brandrow .logo{display:block;height:42px;width:auto}.stage{color:#c7d3cb}.route{margin-top:13px}.route .track{background:#3d4b45}.route .fill{background:var(--gold);height:5px;top:0}.route .pin{display:none}
 .welcome-layout{grid-template-columns:minmax(0,1fr) minmax(350px,.78fr);gap:76px;min-height:580px;padding:72px 0 42px}.hero{max-width:670px}.hero::before{display:none}.hero .eyebrow,.sec-head .eyebrow{color:var(--red);font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.16em}.hero h1{font-size:clamp(3.3rem,6.3vw,6.6rem);line-height:.92;margin:.3em 0 .36em;color:var(--ink)}.hero h1 em{color:var(--red);font-style:normal}.hero p.lede{font-size:1.12rem;line-height:1.7;color:var(--steel);max-width:45ch}.hero-signals span{border:0;background:var(--red);color:#fff;padding:8px 11px;font-size:.64rem;letter-spacing:.1em}.hero-art{height:500px;clip-path:none;background:var(--red);box-shadow:18px 18px 0 var(--teal)}.hero-art::before{inset:16px;border-color:rgba(255,255,255,.7)}.hero-art img{filter:saturate(.85) contrast(1.02)}
@@ -388,6 +388,8 @@ body{background:var(--paper);color:var(--ink);background-image:linear-gradient(9
 #startBtn{border-radius:12px;}
 .resume-banner .btn,.hero-signals span{border-radius:12px;}
 .startcard::before{border-radius:12px;}
+#backBtn,#nextBtn{border-radius:12px;}
+.navrow{position:static;bottom:auto;}
 </style>
 </head>
 <body>
@@ -789,7 +791,7 @@ function renderWelcome(){
         <p class="lede">A thoughtful picture of how you think, learn, work and what energises you — then a practical career direction built around it.</p>
         <div class="hero-signals"><span>6 dimensions</span><span>163 prompts</span><span>Personal report</span></div>
       </div>
-      <div class="hero-art"><img src="mindprint-hero.png" alt="Abstract profile made of connected ideas"></div>
+      <div class="hero-art"><img src="https://raw.githubusercontent.com/subhankaridentitygroup-sudo/cm.psychometrictest/main/mindprint-hero.png" alt="Abstract profile made of connected ideas"></div>
     </div>
 
     ${hasResume ? `
